@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>FosTron Hub - Gaming Community</title>
+    <link rel="stylesheet" href="signup.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+    <main>
+        <section class="hero-sec">
+            <div class="signup-container"> 
+                <h4><a href="../views/learningpage.html"> Back to Home</a></h4>
+                <form id="signupForm" onsubmit="return handleSignup(event)">
+                    <h2> Create Your Account </h2>
+                    <p> Join our community of gamers and connect with like-minded players </p>
+                    <label for="gamertag"><h3> Gamer Tag </h3></label>
+                    <input type="text" id="gamertag" name="gamertag" placeholder="Abcde123" required>
+                    <br>
+                    <label for="emailaddress"><h3> Email Address </h3></label>
+                    <input type="email" id="emailaddress" name="email" placeholder="fostron@gmail.com" required>
+                    <br>
+                    <div class="gender-container">
+                        <label> Gender:</label>
+                        <label> Male</label>
+                        <input type="radio" id="male" value="male" name="gender" required>
+                        <label> Female</label>
+                        <input type="radio" id="female" value="female" name="gender">
+                        <label> Other</label>
+                        <input type="radio" id="other" value="other" name="gender">
+                    </div>
+                    <label for="password"><h3> Password </h3></label>
+                    <input type="password" id="password" name="password" placeholder="enter your password" minlength="8" maxlength="15" required>
+                    <br>
+                    <button type="submit">
+                        <h3>Sign up</h3>
+                    </button>
+                    <a href="signin.html">    
+                        <p> Already have an account ? Sign in</p>
+                    </a>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        function handleSignup(event) {
+            event.preventDefault();
+            
+            // Get form values
+            const gamertag = document.getElementById('gamertag').value;
+            const email = document.getElementById('emailaddress').value;
+            const gender = document.querySelector('input[name="gender"]:checked').value;
+            const password = document.getElementById('password').value;
+
+            // Store user data in localStorage
+            const userData = {
+                gamertag: gamertag,
+                email: email,
+                gender: gender,
+                password: password
+            };
+            
+            localStorage.setItem('userData', JSON.stringify(userData));
+
+            // Redirect to main page
+            window.location.href = 'mainpage1.html';
+            
+            return false;
+        }
+
+        // Check if user is already logged in
+        window.onload = function() {
+            const userData = localStorage.getItem('userData');
+            if (userData) {
+                window.location.href = '#';
+            }
+        };
+    </script>
+</body>
+</html>

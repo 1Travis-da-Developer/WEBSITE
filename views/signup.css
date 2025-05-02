@@ -1,0 +1,142 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-color: #00FFFF; /*Aqua */
+    --primary-dark: #00CCCC;
+    --secondary-color: #FF6B00; /* Orange accent */
+    --dark-bg: #0a0a0a;
+    --medium-bg: #1E1E1E;
+    --light-bg: #2d2d2d;
+    --text-light: #FFFFFF;
+    --text-medium: #E5E5E5;
+    --text-dark: #A0A0A0;
+    --shadow-color: rgba(0, 0, 0, 0.5);
+}
+
+body {
+    font-family: 'Segoe UI', Verdana, Arial, sans-serif;
+    color: var(--text-light);
+    background-color: var(--dark-bg);
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+section {
+    padding: 60px 20px;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+
+a {
+    text-decoration: none;
+    color: inherit;
+    transition: all 0.3s ease;
+}
+
+/* Hero Section */
+.hero-sec{
+    background-image: url(/assets/images/raven.jpeg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: inherit;
+    background-size: 100%;
+    position: relative;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 0;
+    margin-top: 0;
+    overflow: hidden;
+    scrollbar-width: none;
+}
+
+/* Signup container with content*/
+.signup-container{
+    background-color: none;
+    backdrop-filter: blur(10px);
+    padding: 20px;
+    box-shadow: 3px 3px 10px hsl(0, 0%, 50%),3px 3px 10px hsl(0, 0%, 50%);
+    border-radius: 10px;
+    width: 420px;
+    height: 500px;
+    text-align: center;
+    margin-top: 5%;
+    margin-left: 10%;
+    margin-right: 50%;
+    margin-bottom: 3%;
+}
+h2{
+    color: hsl(180, 100%, 57%);
+    font-family: 'Segoe UI', Verdana, Arial, sans-serif;
+    font-size: 28px;
+    margin-bottom: 5px; 
+}
+h3{
+    color: hsl(180, 100%, 57%);
+    font-family: 'Segoe UI', Verdana, Arial, sans-serif;
+    font-size: 16px;
+}
+p{
+    color: hsl(180, 1%, 85%);
+    font-family: 'Segoe UI', Verdana, Arial, sans-serif;
+    font-size: 12px;
+}
+a{
+    text-decoration-line: none;
+}
+h4{
+    color: hsl(180, 1%, 62%);
+    font-family: 'Segoe UI', Verdana, Arial, sans-serif;
+    font-size: 18px;
+    margin-top: 0px;
+    text-align: left;
+}
+form{
+    display: flex;
+    flex-direction: column;
+}
+label{
+    text-align: left;
+}
+input{
+    padding: 10px;
+    margin-bottom: 0px;
+    color: var(--text-light);
+    background-color: hsl(0, 1%, 14%);
+    border: 1px solid hsl(180, 100%, 50%);
+    border-radius: 10px;
+}
+input::placeholder{
+    color: #5a5a5a;
+}
+.gender-container{
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 0px;
+    font-family: 'Segoe UI', Verdana, Arial, sans-serif;
+    font-size: 14px;
+    color: hsl(180, 100%, 57%);
+    font-weight: bold;
+    gap: 10px;
+}
+button{
+    padding: 10px;
+    border-color: aqua;
+    border-radius: 10px;
+    background-color: hsl(0, 1%, 14%);
+    font-family: 'Segoe UI', Verdana, Arial, sans-serif;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: var(--dark-bg);
+    transform: translateY(-2px);
+}
